@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Testes-Separados" verbose="2"
+	parallel="tests">
+
+	<listeners>
+		<listener
+			class-name="commons.InvokedMethodListener" />
+		<listener
+			class-name="utils.AnnotationTransformer" />
+	</listeners>
+
+
+	<test name="Pesquisa Google" parallel="methods"
+		thread-count="1">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="testes.GoogleTestExemplo">
+			</class>
+		</classes>
+	</test>
+	
+
+</suite>

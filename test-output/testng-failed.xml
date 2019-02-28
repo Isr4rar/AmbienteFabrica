@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="tests" name="Failed suite [Testes-Separados]" guice-stage="DEVELOPMENT" verbose="2">
+  <listeners>
+    <listener class-name="commons.InvokedMethodListener"/>
+    <listener class-name="utils.AnnotationTransformer"/>
+  </listeners>
+  <test thread-count="1" parallel="methods" name="Pesquisa Google(failed)" verbose="2">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="testes.GoogleTestExemplo">
+        <methods>
+          <include name="pesquisaGoogle"/>
+        </methods>
+      </class> <!-- testes.GoogleTestExemplo -->
+    </classes>
+  </test> <!-- Pesquisa Google(failed) -->
+</suite> <!-- Failed suite [Testes-Separados] -->
